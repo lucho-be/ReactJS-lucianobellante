@@ -1,0 +1,42 @@
+#root {
+  text-align: center;
+  width: 100%;
+  padding: 0px 50px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+.cart {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 15%;
+}
+
+.cart img {
+  width: 15%;
+  height: max-content;
+  margin-right: 10px;
+}
+
+.cart p {
+  color: green;
+  font-weight: 800;
+  width: max-content;
+}
