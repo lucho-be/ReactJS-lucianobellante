@@ -1,4 +1,4 @@
-export default function (props) {
+export default function ItemListContainter (props) {
     return (
         <>
         <p>{props.string}</p>
