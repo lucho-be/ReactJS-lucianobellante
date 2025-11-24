@@ -1,42 +1,58 @@
-#root {
-  text-align: center;
-  width: 100%;
-  padding: 0px 50px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 body {
   margin: 0;
-  display: flex;
-  font-size: 20px;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: 'Inter', sans-serif;
 }
 
-.nav {
+.navbar {
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  height: 85px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
 }
+
+.navbar img {
+  width: 90px; 
+  height: auto;
+  object-fit: contain;
+}
+
 
 nav {
   display: flex;
-  gap: 30px;
-}
-
-.cart {
-  display: flex;
-  justify-content: end;
   align-items: center;
-  width: 15%;
+  justify-content: center; 
+  gap: 25px;
+  flex: 1;                 
+  max-width: 600px;
 }
 
-.cart img {
-  width: 15%;
-  height: max-content;
-  margin-right: 10px;
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.cart p {
+nav a:hover {
   color: green;
-  font-weight: 800;
-  width: max-content;
+}
+
+.cartwidget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartwidget img {
+  width: 28px; 
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
 }

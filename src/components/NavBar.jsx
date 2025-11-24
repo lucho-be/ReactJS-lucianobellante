@@ -1,9 +1,10 @@
+import '../App.css';
 import CartWidget from "./CartWidget";
 
 export default function Button() {
     return (
-        <div className="nav">
-            <h4>SITIO VERDE</h4>
+        <div className="navbar">
+            <img src="./public/logo.png" alt="logo" className="logo"/>
         <nav>
             <a className="catProducto">Plantas</a >
             <a className="catProducto">Macetas</a >
