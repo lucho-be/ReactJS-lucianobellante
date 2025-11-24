@@ -38,6 +38,7 @@ nav a {
   color: #222;
   font-weight: 500;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 nav a:hover {
