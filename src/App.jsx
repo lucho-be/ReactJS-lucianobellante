@@ -1,14 +1,14 @@
 
 import './App.css'
 import NavBar from './components/NavBar'
-import ItemListContainter from './components/ItemListContainter'
 import Footer from './components/Footer'
+import Home from './components/Home'
 
 function App() {
   return (
   <>
   <NavBar/> 
-  <ItemListContainter string="Soy el ItemListContainter"/>
+  <Home/>
   <Footer/>
   </>
   )
