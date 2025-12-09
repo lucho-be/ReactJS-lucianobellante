@@ -2,14 +2,14 @@ import { NavLink } from 'react-router';
 import '../App.css';
 import CartWidget from "./CartWidget";
 
-export default function Button() {
+export default function NavBar() {
     return (
         <div className="navbar">
             <img src="/logo.png" alt="logo" className="logo"/>
         <nav>
-            
-            <a className="catProducto">Macetas</a >
-            <a className="catProducto">Floreros</a >
+            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/productos">Productos</NavLink>
+            <NavLink to="/sobrenosotros">Categorías</NavLink>
         </nav>
         <CartWidget/>
         </div>

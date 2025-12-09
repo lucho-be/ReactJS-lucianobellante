@@ -51,6 +51,11 @@ nav a:hover {
   color: var(--verde-hover);
 }
 
+nav a.active {
+  color: var(--verde);
+  font-weight: 700;
+}
+
 .cartwidget {
   display: flex;
   align-items: center;
