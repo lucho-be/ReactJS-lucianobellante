@@ -9,7 +9,7 @@ export default function NavBar() {
         <nav>
             <NavLink to="/">Inicio</NavLink>
             <NavLink to="/productos">Productos</NavLink>
-            <NavLink to="/sobrenosotros">Categorías</NavLink>
+            <NavLink to="/categorias">Categorías</NavLink>
         </nav>
         <CartWidget/>
         </div>
