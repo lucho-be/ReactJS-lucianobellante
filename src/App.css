@@ -20,6 +20,70 @@ body {
  
 }
 
+
+/* ESTILOS NAVBAR */
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  height: 85px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.navbar img {
+  width: 90px; 
+  height: auto;
+  object-fit: contain;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 25px;
+  flex: 1;                 
+  max-width: 600px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: var(--verde-hover);
+}
+
+nav a.active {
+  color: var(--verde);
+  font-weight: 700;
+} 
+
+
+/* ESTILOS EXTRAS */
+
+.cartwidget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartwidget img {
+  width: 28px; 
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* ESTILOS DEL HOME */
+
 .home-img {
   width: 100%;
   height: 100vh;
@@ -62,7 +126,7 @@ body {
 .home-info {
   display: flex;
   justify-content: space-around;
-  margin: 3em 0em;
+  margin: 3em 3em;
   padding: 4em 2em;
   gap: 2em;
 }
@@ -89,9 +153,12 @@ h5 {
 
 .home-info-img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 3em;
 }
+
+/* ESTILOS DE PRODUCTOS */
 
 .productos-container {
   display: flex;
@@ -158,68 +225,15 @@ h5 {
 }
 
 
-.navbar {
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2em;
-  height: 85px; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-}
 
-.navbar img {
-  width: 90px; 
-  height: auto;
-  object-fit: contain;
-}
-
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 25px;
-  flex: 1;                 
-  max-width: 600px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  cursor: pointer;
-}
-
-nav a:hover {
-  color: var(--verde-hover);
-}
-
-nav a.active {
-  color: var(--verde);
-  font-weight: 700;
-}
-
-.cartwidget {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cartwidget img {
-  width: 28px; 
-  height: auto;
-  object-fit: contain;
-  cursor: pointer;
-}
+/* ESTILOS DEL FOOTER */
 
 footer {
- font-family: 'Inter', sans-serif;
+ margin-top: 3em;
 }
 
 .footer hr {
-  border-top: 2px solid #ccc;
+  border-top: 2px solid #e4e4e4;
   margin: 0;
 }
 

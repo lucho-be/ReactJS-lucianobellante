@@ -37,7 +37,7 @@ function Home() {
             </section>
             <section className="productos">
                 <h3>Nuestros productos</h3>
-                    <Productos/>
+                <Productos />
             </section>
         </>
     )
