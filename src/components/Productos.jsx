@@ -75,7 +75,9 @@ function Productos() {
 ]
 
   return (
-    <div className="productos-container">
+    <section className="productos">
+      <h3>Nuestros productos</h3>
+      <div className="productos-container">
       {productos.map(prod => (
         <ProductCard
           key={prod.id}
@@ -85,6 +87,8 @@ function Productos() {
         />
       ))}
     </div>
+      </section>
+    
   );
 }
 

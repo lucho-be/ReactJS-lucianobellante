@@ -35,10 +35,6 @@ function Home() {
                     <img src="/img/info.jpeg" alt="jardinero" />
                 </div>
             </section>
-            <section className="productos">
-                <h3>Nuestros productos</h3>
-                <Productos />
-            </section>
         </>
     )
 }
