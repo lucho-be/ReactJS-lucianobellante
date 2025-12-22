@@ -10,7 +10,7 @@ export default function ProductoDetalle() {
         </p>
         <div>
         <input type="button" value="+" />
-        <input type="number" name="" id="" />
+        <input type="number" name="" id="" min={1} defaultValue={1}/>
         <input type="button" value="-" />
         </div>
         <button>Agregar al carrito</button>
