@@ -227,14 +227,20 @@ h5 {
 }
 
 .productDetail {
-  width: 70%;
-  height: 500px;
+  width: 80%;
+  padding: 2em;
   box-shadow: var(--shadow);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   background-color: white;
   border-radius: 1em;
   margin: 2em auto;
+  align-items: center;
+}
+
+.productDetail img {
+  width: 70%;
+  border-radius: 1em;
 }
 
 .skeleton {
