@@ -5,6 +5,7 @@
   --verde: #2a7d2e;
   --fondo: #f4f4f4;
   --verde-hover: #2a7d2e;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 * {
@@ -30,7 +31,7 @@ body {
   justify-content: space-between;
   padding: 0 2em;
   height: 85px; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+  box-shadow: var(--shadow); 
 }
 
 .navbar img {
@@ -182,7 +183,7 @@ h5 {
   background-color: white;
   padding: 1.5em;
   border-radius: 1em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow);
   margin: 1em;
   width: 320px;
   text-align: center;
@@ -223,6 +224,23 @@ h5 {
   border: solid 2px var(--verde);
   cursor: pointer;
   text-decoration: none;
+}
+
+.productDetail {
+  width: 70%;
+  height: 500px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 1em;
+  margin: 2em auto;
+}
+
+.skeleton {
+  background-color: #e4e4e4;
+  border-radius: 7px;
+  box-shadow: var(--shadow);
 }
 
 
