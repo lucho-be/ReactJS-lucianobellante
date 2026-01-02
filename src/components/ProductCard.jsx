@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function ProductCard(props) {
   return (
     <div className="product">
@@ -11,9 +13,12 @@ function ProductCard(props) {
       <p className="product-details">{props.detallesProducto}</p>
       <p className="product-price">${props.precioProducto}</p>
 
-      <button className="product-button">Ver producto</button>
-      </div>
+      <Link to={`/producto/${props.id}`} className="view-button">
+        Ver producto
+      </Link>
+    </div>
   );
 }
 
 export default ProductCard;
+

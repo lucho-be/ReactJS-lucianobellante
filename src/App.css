@@ -161,6 +161,17 @@ h5 {
 
 /* ESTILOS DE PRODUCTOS */
 
+.view-button {
+  background-color: transparent;
+  font-weight: 600;
+  color: var(--verde);
+  padding: 0.6em 1.7em;
+  border-radius: 7px;
+  border: solid 2px var(--verde);
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .productos-container {
   display: flex;
   flex-wrap: wrap;
@@ -226,30 +237,55 @@ h5 {
   text-decoration: none;
 }
 
-.productDetail {
+.producto-detalle {
   width: 80%;
   padding: 2em;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: #fafafa;
   border-radius: 1em;
   margin: 2em auto;
   align-items: center;
 }
 
-.productDetail img {
-  width: 70%;
+.producto-detalle img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
   border-radius: 1em;
 }
 
-.skeleton {
-  background-color: #e4e4e4;
-  border-radius: 7px;
-  box-shadow: var(--shadow);
+.producto-info {
+  padding: 2em;
+  width: 50%;
+  text-align: center;
 }
 
+.prod-detalle {
+  font-size: 1.5em;
+  color: #555;
+  margin: 1em 0;
+  font-weight: 500;
+}
 
+.prod-precio {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--verde);
+  margin: 1em 0;
+}
+
+.producto-info button {
+  background-color: var(--verde);
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
 
 /* ESTILOS DEL FOOTER */
 

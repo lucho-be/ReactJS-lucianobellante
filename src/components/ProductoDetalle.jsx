@@ -1,23 +1,54 @@
-export default function ProductoDetalle() {
-  return (
-    <div className="productDetail">
-        <div>
-        <h1>Producto</h1>
-        <img src="public\img\productos\Jarrón Cilíndrico.jpg" alt="" />
-        </div>
-        <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis modi natus odit assumenda molestiae sunt eligendi possimus inventore, maxime sit excepturi non eius totam vero delectus deserunt quasi quod officia!
-        </p>
-        <div>
-        <input type="button" value="+" />
-        <input type="number" name="" id="" min={1} defaultValue={1}/>
-        <input type="button" value="-" />
-        </div>
-        <button>Agregar al carrito</button>
-        </div>
-    </div>
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../data/firebase";
+import { useContext } from "react";
+import { CartContext } from "./CartPage"
 
-  )
+export default function ProductoDetalle() {
+  const { id } = useParams();
+  const { agregarAlCarrito } = useContext(CartContext);
+  
+    const [producto, setProducto] = useState(null);
+
+  useEffect(() => {
+    async function obtenerProducto() {
+      const productoRef = doc(db, "productos", id);
+      const snapshot = await getDoc(productoRef);
+
+      if (snapshot.exists()) {
+        setProducto({
+          id: snapshot.id,
+          ...snapshot.data()
+        });
+      }
+    }
+
+    obtenerProducto();
+  }, [id]);
+
+  if (!producto) return <p>Cargando producto...</p>;
+
+  return (
+    <article className="producto-detalle">
+      <div>
+        <h3>{producto.nombre}</h3>
+        <img 
+        src={`/img/productos/${producto.nombre}.jpg`}
+        alt={producto.nombre}
+      />
+      </div>
+
+      <div className="producto-info">
+        <p className="prod-detalle">{producto.detalle}</p>
+        <p className="prod-precio">${producto.precio}</p>
+        <button onClick={() => agregarAlCarrito(producto)}>
+  Agregar al carrito
+</button>
+      </div>
+    </article>
+  );
 }
+
 
 
