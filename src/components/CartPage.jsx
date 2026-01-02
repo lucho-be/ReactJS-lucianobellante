@@ -25,7 +25,7 @@ export function CartPage() {
 
   return (
     <section className="cart">
-      <h2>Carrito de compras</h2>
+      <h2>Carrito</h2>
 
       {cart.map(producto => (
         <div key={producto.id} className="cart-item">
@@ -34,7 +34,7 @@ export function CartPage() {
         alt={producto.nombre}
       />
           <p>{producto.nombre}</p>
-          <p>${producto.precio}</p>
+          <p className="cart-precio">$ {(producto.precio).toLocaleString('es-AR')}</p>
         </div>
       ))}
     </section>

@@ -12,8 +12,8 @@ import { CartPage } from "./components/CartPage";
 function App() {
   return (
   <>
-  <NavBar/>
    <CartProvider>
+  <NavBar/>
   <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/productos" element={<Productos/>} />
