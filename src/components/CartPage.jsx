@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Swal from 'sweetalert2'
 
 export const CartContext = createContext();
 
@@ -7,6 +8,12 @@ export default function CartProvider({ children }) {
 
   function agregarAlCarrito(producto) {
     setCart(prev => [...prev, producto]);
+    Swal.fire({
+      icon: 'success',
+      title: 'Producto agregado al carrito',
+      showConfirmButton: false,
+      timer: 1500
+})
   }
 
   return (
@@ -20,7 +27,7 @@ export function CartPage() {
   const { cart } = useContext(CartContext);
 
   if (cart.length === 0) {
-    return <p>El carrito está vacío</p>;
+    return <p className="cart-item">El carrito está vacío</p>;
   }
 
   return (

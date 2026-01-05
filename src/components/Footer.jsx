@@ -15,7 +15,7 @@ export default function Footer() {
                     <button>Suscribirse</button>
                 </div>
             </div>
-            <div className="copyright"><p>©2025. Luciano Bellante. Proyecto del curso React JS de Coderhouse.</p>
+            <div className="copyright"><p>©2026. Luciano Bellante. Proyecto del curso React JS de Coderhouse.</p>
             </div>
         </footer>
     )
