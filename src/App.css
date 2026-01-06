@@ -4,7 +4,7 @@
 :root {
   --verde: #2a7d2e;
   --fondo: #f4f4f4;
-  --verde-hover: #2a7d2e;
+  --verde-hover: #1f5c22;
   --shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -12,6 +12,15 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+}
+
+.swal2-confirm {
+  background-color: var(--verde) !important;
+  color: white;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--verde-hover) !important;
 }
 
 body {
@@ -342,6 +351,7 @@ h5 {
   border: 1px solid #e4e4e4;
   border-radius: 1em;
   margin: 1em 3em;
+  background-color: #fafafa;
 }
 
 .cart-item p {
@@ -369,6 +379,42 @@ h5 {
   object-fit: cover;
   border-radius: 0.5em;
 }
+
+.formulario {
+  padding: 1em 2em;
+  margin: 1em 3em;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e4;
+  border-radius: 1em;
+  }
+
+  .formulario div {
+display: flex;
+flex-direction: column;
+  }
+
+  .formulario input {
+    border-radius: 0.8em;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    margin: 1em 0em;
+  }
+
+  .formulario button {
+    height: 40px;
+    width: 80px;
+    background-color: var(--verde);
+    border-radius: 0.7em;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .formulario button:hover {
+    background-color: var(--verde-hover);
+  }
 
 /* ESTILOS DEL FOOTER */
 

@@ -26,11 +26,27 @@ export default function CartProvider({ children }) {
 export function CartPage() {
   const { cart } = useContext(CartContext);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+     const form = e.currentTarget;
+  const nombre = form.nombre.value;
+  const email = form.email.value;
+
+  Swal.fire({
+  title: "Compra exitosa",
+  html: `Felicitaciones <b>${nombre}</b> por tu compra, recibiras el detalle al correo informado: <b>${email}</b>`,
+  icon: "success"
+});
+    
+  }
+
   if (cart.length === 0) {
     return <p className="cart-item">El carrito está vacío</p>;
   }
 
   return (
+    <>
     <section className="cart">
       <h2>Carrito</h2>
 
@@ -45,6 +61,21 @@ export function CartPage() {
         </div>
       ))}
     </section>
+    <section className="formulario">
+      <h2>Finalizar compra</h2>
+      <form onSubmit={handleSubmit}>
+  <div>
+    <label htmlFor="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required="" />
+  </div>
+  <div>
+    <label htmlFor="email">Email</label>
+    <input type="text" id="email" name="email" required="" />
+  </div>
+  <button type="submit">Comprar</button>
+</form>
+    </section>
+    </>
   );
 }
 
