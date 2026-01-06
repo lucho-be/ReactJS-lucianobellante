@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { useContext } from "react";
-import { CartContext } from "./CartPage"; // ajustá la ruta si hace falta
+import { CartContext } from "./CartPage"; 
 import "../App.css";
 
 export default function CartWidget() {
