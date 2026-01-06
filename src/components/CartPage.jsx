@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { useNavigate } from "react-router";
 
 export const CartContext = createContext();
 
@@ -25,6 +26,7 @@ export default function CartProvider({ children }) {
 
 export function CartPage() {
   const { cart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -34,11 +36,13 @@ export function CartPage() {
   const email = form.email.value;
 
   Swal.fire({
-  title: "Compra exitosa",
-  html: `Felicitaciones <b>${nombre}</b> por tu compra, recibiras el detalle al correo informado: <b>${email}</b>`,
-  icon: "success"
-});
-    
+      title: "Compra exitosa",
+      html: `Felicitaciones <b>${nombre}</b> por tu compra, recibirás el detalle al correo: <b>${email}</b>`,
+      icon: "success",
+      confirmButtonText: "Ir al inicio"
+    }).then(() => {
+      navigate("/");
+    });
   }
 
   if (cart.length === 0) {
